@@ -6,7 +6,17 @@ interface ThemeProviderProps {
 }
 
 const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children }) => {
-  return <Theme>{children}</Theme>;
+  return (
+    <Theme
+      accentColor="amber"
+      grayColor="slate"
+      panelBackground="solid"
+      scaling="100%"
+      radius="medium"
+    >
+      {children}
+    </Theme>
+  );
 };
 
 export default ThemeProvider;
